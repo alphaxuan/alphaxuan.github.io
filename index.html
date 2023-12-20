@@ -31,11 +31,13 @@
 			}
 			#header_center >img{
 				width:200px;
+				
 			}
 			#header_center_right{
 				width:300px;
 				height:100%;
 				display: flex;
+				transition:all 0.5s ease;
 			}
 			#header_center_right img{
 				width: 30px;
@@ -91,11 +93,17 @@
 		        document.getElementById("bg").style.backgroundImage = "url('https://alphaxuan.github.io/img/"+id+".jpg')";
 		        document.getElementById("bg").style.display = "block";
 		        document.getElementsByClassName("close_btn")[0].style.display = "block";
-		      }
+		    }
 		      function closeImage(){
-		    	  document.getElementById("bg").style.display = "none";
-		    	  document.getElementsByClassName("close_btn")[0].style.display = "none";
-		      }
+				document.getElementById("bg").style.display = "none";
+		    	document.getElementsByClassName("close_btn")[0].style.display = "none";
+		    }
+			  function change(){
+			    document.getElementById("header_center_right").style.transform="scale(1.1)";
+			}
+			  function reset(){
+			    document.getElementById("header_center_right").style.transform="scale(1)";
+			}
 		    </script>
 	</head>
 	<body>
@@ -103,7 +111,7 @@
 			<div id="header">
 				<div id="header_center">
 					<img src="https://www.ccam.org.cn/CN/static/img/11.png" alt>
-					<div id="header_center_right">
+					<div id="header_center_right"  onmouseover="change()" onmouseout="reset()">
 						<div>
 							<img src="https://img95.699pic.com/xsj/18/tt/td.jpg%21/fh/300" alt>
 							<span>常见问题</span>
@@ -117,28 +125,28 @@
 			</div>
 			<div id="link">
 				<div>
-					<img src="https://www.ccam.org.cn/public/exhibition/logo/20210614200809.jpg" onclick="showImage(1)">
+					<img id="img" src="https://www.ccam.org.cn/public/exhibition/logo/20210614200809.jpg" onclick="showImage(1)">
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/exhibition/logo/20210614201835.jpg" onclick="showImage(2)">
+					<img id="img" src="https://www.ccam.org.cn/public/exhibition/logo/20210614201835.jpg" onclick="showImage(2)">
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/exhibition/logo/20210614202426.jpg" onclick="showImage(3)">
+					<img id="img" src="https://www.ccam.org.cn/public/exhibition/logo/20210614202426.jpg" onclick="showImage(3)">
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/exhibition/logo/20210614202626.jpg" onclick="showImage(4)">
+					<img id="img" src="https://www.ccam.org.cn/public/exhibition/logo/20210614202626.jpg" onclick="showImage(4)">
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/collection/s_20210528152109.jpg" onclick="showImage(5)">
+					<img id="img" src="https://www.ccam.org.cn/public/collection/s_20210528152109.jpg" onclick="showImage(5)">
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/collection/s_20210528152229.jpg" onclick="showImage(6)">
+					<img id="img" src="https://www.ccam.org.cn/public/collection/s_20210528152229.jpg" onclick="showImage(6)">
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/collection/s_20210528152759.jpg" onclick="showImage(7)"> 
+					<img id="img" src="https://www.ccam.org.cn/public/collection/s_20210528152759.jpg" onclick="showImage(7)"> 
 				</div>
 				<div>
-					<img src="https://www.ccam.org.cn/public/collection/s_20210528153625.jpg" onclick="showImage(8)">
+					<img id="img" src="https://www.ccam.org.cn/public/collection/s_20210528153625.jpg" onclick="showImage(8)">
 				</div>
 			</div>
 		</div>
